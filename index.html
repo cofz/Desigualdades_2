@@ -2,49 +2,25 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Rendimento Mensal - Observable Notebook</title>
-  <!-- Load Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Observable Notebook</title>
   <style>
-    body {
-      font-family: 'Source Sans Pro', sans-serif;
-      margin: 20px;
-      background-color: #f5f5f5;
-      color: #333;
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
     }
-
-    h1, h2, h3 {
-      margin-top: 30px;
-      margin-bottom: 20px;
-    }
-
     iframe {
       width: 100%;
+      height: 100%;
       border: none;
-      overflow: hidden;
-    }
-
-    small {
-      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
 
-  <!-- Observable notebook iframe -->
   <iframe 
-    id="notebook"
-    src="https://observablehq.com/embed/1d996ca2a2aa14ca@575?cells=myQuestion%2Cviewof+qual_seu_centil%2Ctext_after%2CmyHeading%2Cviewof+percentil%2Crendimento_mensal_medio%2Cend">
+    src="https://observablehq.com/embed/1d996ca2a2aa14ca@593?cells=myQuestion%2Cviewof+qual_seu_centil%2Ctext_after%2CmyHeading%2Cviewof+percentil%2CselectedRow%2Crendimento_mensal_medio%2Cend">
   </iframe>
-
-  <script>
-    // Auto-resize iframe height to fit Observable notebook cells
-    window.addEventListener("message", (event) => {
-      if (event.data.height) {
-        document.getElementById("notebook").style.height = event.data.height + "px";
-      }
-    });
-  </script>
 
 </body>
 </html>
