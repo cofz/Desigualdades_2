@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Notebook Observable</title>
+  <!-- Optional: make page look nicer -->
+  <style>
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      margin: 20px;
+      background: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Observable embed container -->
+  <div id="observablehq-notebook"></div>
+
+  <!-- Embed script -->
+  <script type="module">
+    import { Runtime, Inspector } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import notebook from "https://api.observablehq.com/1d996ca2a2aa14ca@546.js?v=b2067b09854b6cd22e15dd1af17a87906ae9e494";
+
+    const runtime = new Runtime();
+    const main = runtime.module(notebook, name => {
+      // Only render the selected cells
+      if ([
+        "myQuestion",
+        "viewof qual_seu_centil",
+        "text_after",
+        "myHeading",
+        "viewof percentil",
+        "canvas_",
+        "rendimento_mensal_medio",
+        "end"
+      ].includes(name)) return new Inspector(document.getElementById("observablehq-notebook"));
+    });
+  </script>
+
+</body>
+</html>
